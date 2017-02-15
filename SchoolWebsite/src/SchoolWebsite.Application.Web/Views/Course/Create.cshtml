@@ -1,0 +1,50 @@
+﻿@model SchoolWebsite.Application.Web.Models.CourseViewModels.CreateCourseViewModel
+
+<div class="container">
+
+    <h2>Create Course</h2>
+
+    <form asp-controller="Course" asp-action="Create" method="post">
+        
+        <div class="form-group">
+            <label asp-for="CourseId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CourseId" class="form-control" />
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="InstructorId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select name="InstructorId">
+                    <option></option>
+                    @foreach (var item in Model.Instructors)
+                    {
+                        <option value=@item.Id>@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="InstructorId" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Create Course</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

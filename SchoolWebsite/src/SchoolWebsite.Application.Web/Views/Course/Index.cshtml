@@ -1,0 +1,42 @@
+﻿@model SchoolWebsite.Application.Web.Models.CourseViewModels.IndexViewModel
+
+<div class="container">
+
+    <br />
+
+    @Html.ActionLink("Add Course","Create")
+
+    <br />
+
+
+    <h4>Course Overview</h4>
+
+    <table class="table">
+        <tr>
+            <th>Course Id</th>
+            <th>Name</th>
+            <th>Instructor</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Courses)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.CourseId)</td>
+                <td>@Html.DisplayFor(model => item.Name)</td>
+                @if (item.Instructor != null)
+                {
+                    <td>@Html.DisplayFor(model => item.Instructor.Name)</td>
+                }
+                else
+                {
+                    <td>No Instructor assigned</td>
+                }
+
+                <td>
+                    @Html.ActionLink("Edit","Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

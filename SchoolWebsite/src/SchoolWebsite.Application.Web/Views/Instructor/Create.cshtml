@@ -1,0 +1,82 @@
+﻿@model SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel
+
+<div class="container">
+
+    <h2>Create Instructor</h2>
+
+    <form asp-controller="Instructor" asp-action="Create" method="post">
+
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Birth" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Birth" class="form-control" />
+                <span asp-validation-for="Birth" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Courses" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select name="CourseId">
+                    <option></option>
+                    @foreach (var item in Model.Courses)
+                    {
+                        @if (item.InstructorId == null)
+                        {
+                            <option value=@item.CourseId>@item.Name</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="Courses" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+
+        <div class="form-group">
+            @foreach (var item in Model.Courses)
+            {
+                @if(item.InstructorId==null)
+                {
+                    <div>
+                        <label asp-for="@item.Name" class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> @item.Name
+                        </label>
+                    </div>
+                }
+
+            }
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Create Instructor</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,48 @@
+﻿@model SchoolWebsite.Application.Web.Models.CourseViewModels.DeleteCourseViewModel
+
+<div class="container">
+
+    <h4>Confirm delete of the course</h4>
+    <br />
+
+    
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.CourseId)*@
+                    <label asp-for="CourseId"></label>:
+                </dt>
+
+                <dd>
+                    @*@Html.DisplayFor(model => model.CourseId)*@
+                    <label>@Model.CourseId</label>
+                </dd>
+
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.Name)*@
+                    <label asp-for="Name"></label>:
+                </dt>
+
+                <dd>
+                    @*@Html.DisplayFor(model => model.Name)*@
+                    <label>@Model.Name</label>
+                </dd>
+
+                <dt>
+                   @* @Html.DisplayNameFor(model => model.InstructorName)*@
+                    <label asp-for="InstructorName"></label>:
+                </dt>
+
+                <dd>
+                    @*@Html.DisplayFor(model => model.InstructorName)*@
+                    <label>@Model.InstructorName</label>
+                </dd>
+            </dl>
+        </div>
+    <form asp-controller="Course" asp-action="Delete" method="post">
+        <div class="form-group">
+            <input type="submit" value="Delete Course"  class="btn btn-danger">
+        </div>
+    </form>
+
+</div>
