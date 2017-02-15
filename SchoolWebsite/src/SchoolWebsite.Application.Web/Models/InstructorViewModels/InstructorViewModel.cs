@@ -20,6 +20,8 @@ namespace SchoolWebsite.Application.Web.Models.InstructorViewModels
         [DataType(DataType.Date)]
         public DateTime? Birth { get; set; }
 
+        public Filter[] Filters { get; set; }
+
         public int? CourseId { get; set; }
 
         public IList<Instructor> Instructors { get; set; }

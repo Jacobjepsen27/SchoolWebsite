@@ -42,9 +42,10 @@ namespace SchoolWebsite.Application.Web.Controllers
         {
             var viewModel = new InstructorViewModel();
             viewModel.Courses = queryDb.Courses.ToList();
-            //Commit test2
+            viewModel.Filters = CheckBoxInitialization(viewModel);
             return View(viewModel);
         }
+        
 
         [HttpPost]
         public IActionResult Create(InstructorViewModel viewModel, [FromServices] CreateInstructor command)
@@ -83,6 +84,38 @@ namespace SchoolWebsite.Application.Web.Controllers
                     return RedirectToAction("Index", "Instructor");
                 else
                     return RedirectToAction("Error", "Instructor");
+        }
+
+
+
+
+        //This method fills a Filter[] with data about the courses.
+        //Filter[] contains an Assigned Boolean which will tell the view whether or not the course is available for a instructor
+        public Filter[] CheckBoxInitialization(InstructorViewModel viewModel)
+        {
+            int courseCount = viewModel.Courses.Count();//viewModel.Courses.Count();
+            Course[] course = new Course[courseCount];
+            course = viewModel.Courses.ToArray();
+            Filter[] filter = new Filter[courseCount];
+
+            //Has to initialize every filter to avoid Non-instantiated object exception or whatever
+            for (int i = 0; i < courseCount; i++)
+            {
+                filter[i] = new Filter();
+            }
+            //Now we can fill the Filter array with data which is used by the razor view
+            for (int i = 0; i < courseCount; i++)
+            {
+                filter[i].Id = course[i].CourseId;
+                filter[i].Name = course[i].Name;
+                filter[i].Selected = false;
+                if (course[i].InstructorId != null)
+                    filter[i].Assigned = true;
+                else
+                    filter[i].Assigned = false;
+
+            }
+            return filter;
         }
 
     }
