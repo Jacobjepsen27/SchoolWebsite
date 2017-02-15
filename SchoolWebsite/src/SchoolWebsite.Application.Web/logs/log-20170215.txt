@@ -11608,3 +11608,1081 @@ FROM [Courses] AS [c]
 2017-02-15 22:20:45.542 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
 2017-02-15 22:20:45.549 +01:00 [Information] Authorization was successful for user: "Admin".
 2017-02-15 22:20:45.874 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel", "SchoolWebsite.Core.Command.InstructorCommands.CreateInstructor"]) - ModelState is Valid
+2017-02-15 22:49:31.670 +01:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 22:49:31.766 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 22:49:31.789 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-15 22:49:32.894 +01:00 [Information] Executed DbCommand (22ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:49:33.062 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:49:33.082 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:49:33.137 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:49:33.182 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:49:33.215 +01:00 [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:49:33.287 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:49:33.533 +01:00 [Information] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:49:33.605 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:49:33.617 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:49:33.627 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:49:33.639 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:49:34.045 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-15 22:49:34.045 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-15 22:49:34.161 +01:00 [Information] Request finished in 133.7844ms 200 
+2017-02-15 22:49:34.553 +01:00 [Information] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[InstructorId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[StudentId], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__id_0
+2017-02-15 22:49:34.653 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-02-15 22:49:34.666 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:49:34.709 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2017-02-15 22:49:34.749 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-02-15 22:49:34.766 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:49:35.281 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:49:38.704 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-15 22:49:39.930 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 4767.7878ms
+2017-02-15 22:49:40.095 +01:00 [Information] Request finished in 6102.7301ms 200 text/html; charset=utf-8
+2017-02-15 22:49:40.460 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/favicon.ico  
+2017-02-15 22:49:40.492 +01:00 [Information] The file "/favicon.ico" was not modified
+2017-02-15 22:49:40.507 +01:00 [Information] Request finished in 47.3766ms 304 image/x-icon
+2017-02-15 22:49:47.213 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:49:47.222 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:49:47.251 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:49:47.264 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:49:47.295 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:49:47.711 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:49:47.879 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 650.6346ms
+2017-02-15 22:49:47.889 +01:00 [Information] Request finished in 673.3353ms 200 text/html; charset=utf-8
+2017-02-15 22:49:49.662 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 22:49:49.668 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:49:49.688 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:49:49.693 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:49:49.713 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 22:49:49.950 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 22:49:50.201 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 513.4343ms
+2017-02-15 22:49:50.209 +01:00 [Information] Request finished in 545.5643ms 200 text/html; charset=utf-8
+2017-02-15 22:50:25.866 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Create application/x-www-form-urlencoded 486
+2017-02-15 22:50:25.875 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:50:25.882 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:50:26.204 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel", "SchoolWebsite.Core.Command.InstructorCommands.CreateInstructor"]) - ModelState is Valid
+2017-02-15 22:52:43.694 +01:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 22:52:43.789 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 22:52:43.814 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-15 22:52:44.903 +01:00 [Information] Executed DbCommand (23ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:52:45.058 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:52:45.076 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 22:52:45.224 +01:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:52:45.290 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:52:45.311 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 22:52:45.359 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:52:45.570 +01:00 [Information] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:52:45.635 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:52:45.648 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:52:45.659 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 22:52:45.671 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 22:52:45.866 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-15 22:52:45.866 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-15 22:52:45.989 +01:00 [Information] Request finished in 133.3975ms 200 
+2017-02-15 22:52:46.266 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:52:46.780 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:52:50.279 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-15 22:52:51.498 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 4831.4324ms
+2017-02-15 22:52:51.626 +01:00 [Information] Request finished in 5812.558ms 200 text/html; charset=utf-8
+2017-02-15 22:52:54.489 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:52:54.496 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:52:54.531 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:52:54.549 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:52:54.609 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:52:55.016 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:52:55.140 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 636.715ms
+2017-02-15 22:52:55.149 +01:00 [Information] Request finished in 659.3746ms 200 text/html; charset=utf-8
+2017-02-15 22:52:56.326 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 22:52:56.332 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:52:56.352 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:52:56.357 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:52:56.375 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 22:52:56.613 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 22:52:56.827 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 477.1409ms
+2017-02-15 22:52:56.835 +01:00 [Information] Request finished in 508.4128ms 200 text/html; charset=utf-8
+2017-02-15 22:53:06.967 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Create application/x-www-form-urlencoded 488
+2017-02-15 22:53:06.973 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:53:06.982 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:53:07.316 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel", "SchoolWebsite.Core.Command.InstructorCommands.CreateInstructor"]) - ModelState is Valid
+2017-02-15 22:53:07.388 +01:00 [Information] Running command CreateInstructor { Instructor: Instructor { Id: 0, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/15/2017 00:00:00, Courses: [], ApplicationUser: null }, Courses: [Course { CourseId: 54323, Name: null, InstructorId: null, CourseStudents: [], Instructor: null }], Status: False }
+2017-02-15 22:53:07.636 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Instructors] ([Birth], [Email], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Instructors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2017-02-15 22:53:41.729 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 22:53:50.024 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 22:53:50.030 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 43049.2497ms
+2017-02-15 22:53:50.038 +01:00 [Information] Request finished in 43072.5888ms 302 
+2017-02-15 22:53:50.056 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:53:50.061 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:53:50.066 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:53:50.070 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:53:50.082 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:53:50.087 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:53:50.111 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 44.5423ms
+2017-02-15 22:53:50.118 +01:00 [Information] Request finished in 65.7563ms 200 text/html; charset=utf-8
+2017-02-15 22:53:55.305 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 22:53:55.310 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:53:55.315 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:53:55.320 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:53:55.332 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 22:53:55.337 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 22:53:55.356 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 41.5679ms
+2017-02-15 22:53:55.367 +01:00 [Information] Request finished in 57.9112ms 200 text/html; charset=utf-8
+2017-02-15 22:53:57.449 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:53:57.455 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:53:57.459 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:53:57.464 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:53:57.475 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:53:57.480 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:53:57.495 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 34.9457ms
+2017-02-15 22:53:57.502 +01:00 [Information] Request finished in 52.3729ms 200 text/html; charset=utf-8
+2017-02-15 22:54:00.663 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Delete/4005  
+2017-02-15 22:54:00.668 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:00.675 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:00.680 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4005"]) - ModelState is Valid
+2017-02-15 22:54:00.700 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 22:54:00.715 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-15 22:54:05.024 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+WHERE [c].[InstructorId] = @__id_0
+2017-02-15 22:54:05.193 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Delete.cshtml".
+2017-02-15 22:54:05.278 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 4602.4995ms
+2017-02-15 22:54:05.293 +01:00 [Information] Request finished in 4625.3962ms 200 text/html; charset=utf-8
+2017-02-15 22:54:22.834 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Delete/4005 application/x-www-form-urlencoded 225
+2017-02-15 22:54:22.841 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:22.849 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:22.856 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4005", "SchoolWebsite.Core.Command.InstructorCommands.DeleteInstructor"]) - ModelState is Valid
+2017-02-15 22:54:22.893 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 22:54:22.972 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[Birth], [c].[Email], [c].[Name]
+FROM [Instructors] AS [c]
+WHERE [c].[Id] = @__id_0
+ORDER BY [c].[Id]
+2017-02-15 22:54:23.043 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c0].[CourseId], [c0].[InstructorId], [c0].[Name]
+FROM [Courses] AS [c0]
+WHERE EXISTS (
+    SELECT TOP(2) 1
+    FROM [Instructors] AS [c]
+    WHERE ([c].[Id] = @__id_0) AND ([c0].[InstructorId] = [c].[Id]))
+ORDER BY [c0].[InstructorId]
+2017-02-15 22:54:23.059 +01:00 [Information] Running command DeleteInstructor { Instructor: Instructor { Id: 4005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/15/2017 00:00:00, Courses: [Course { CourseId: 54323, Name: null, InstructorId: 4005, CourseStudents: [], Instructor: Instructor { Id: 4005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/15/2017 00:00:00, Courses: [Course { CourseId: 54323, Name: null, InstructorId: 4005, CourseStudents: [], Instructor: Instructor { Id: 4005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/15/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }], ApplicationUser: null }, Status: False }
+2017-02-15 22:54:26.749 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0
+WHERE [CourseId] = @p1;
+SELECT @@ROWCOUNT;
+2017-02-15 22:54:26.760 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Instructors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 22:54:26.781 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 22:54:26.785 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 3939.0599ms
+2017-02-15 22:54:26.789 +01:00 [Information] Request finished in 3956.8201ms 302 
+2017-02-15 22:54:26.805 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:54:26.812 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:26.816 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:26.820 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:26.832 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:54:26.836 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:54:26.854 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 37.8627ms
+2017-02-15 22:54:26.882 +01:00 [Information] Request finished in 77.0001ms 200 text/html; charset=utf-8
+2017-02-15 22:54:30.746 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:54:30.751 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:30.756 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:30.761 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:30.772 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:54:30.777 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:54:30.791 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 34.7009ms
+2017-02-15 22:54:30.797 +01:00 [Information] Request finished in 51.2039ms 200 text/html; charset=utf-8
+2017-02-15 22:54:32.554 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 22:54:32.560 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:32.565 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:32.569 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:32.580 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 22:54:32.584 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 22:54:32.614 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 48.9972ms
+2017-02-15 22:54:32.622 +01:00 [Information] Request finished in 68.3124ms 200 text/html; charset=utf-8
+2017-02-15 22:54:38.104 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 22:54:38.109 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:38.116 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:38.124 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:38.151 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 22:54:38.343 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 22:54:38.440 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 324.6637ms
+2017-02-15 22:54:38.446 +01:00 [Information] Request finished in 341.9883ms 200 text/html; charset=utf-8
+2017-02-15 22:54:43.698 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course/Edit/54323  
+2017-02-15 22:54:43.705 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:43.711 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:43.718 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["54323"]) - ModelState is Valid
+2017-02-15 22:54:43.728 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 22:54:43.747 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 22:54:43.772 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:54:43.961 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Edit.cshtml".
+2017-02-15 22:54:44.055 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 344.9309ms
+2017-02-15 22:54:44.062 +01:00 [Information] Request finished in 363.7996ms 200 text/html; charset=utf-8
+2017-02-15 22:54:50.543 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Course/Edit/54323 application/x-www-form-urlencoded 256
+2017-02-15 22:54:50.549 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:50.558 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:50.567 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["54323", "SchoolWebsite.Application.Web.Models.CourseViewModels.EditCourseViewModel", "SchoolWebsite.Core.Command.CourseCommands.EditCourse"]) - ModelState is Valid
+2017-02-15 22:54:50.586 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 22:54:50.601 +01:00 [Information] Running command EditCourse { Course: Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: null, CourseStudents: [], Instructor: null }, Status: False }
+2017-02-15 22:54:50.615 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 22:54:50.621 +01:00 [Information] Executing RedirectResult, redirecting to "/Course".
+2017-02-15 22:54:50.626 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 68.7645ms
+2017-02-15 22:54:50.632 +01:00 [Information] Request finished in 88.6196ms 302 
+2017-02-15 22:54:50.643 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 22:54:50.649 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:50.654 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:50.660 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:50.676 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 22:54:50.682 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 22:54:50.709 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 51.1295ms
+2017-02-15 22:54:50.717 +01:00 [Information] Request finished in 74.8684ms 200 text/html; charset=utf-8
+2017-02-15 22:54:54.784 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:54:54.790 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:54.795 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:54.801 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:54.812 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:54:54.816 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:54:54.829 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 34.5829ms
+2017-02-15 22:54:54.837 +01:00 [Information] Request finished in 51.5282ms 200 text/html; charset=utf-8
+2017-02-15 22:54:56.725 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 22:54:56.730 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:54:56.737 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:54:56.742 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:54:56.754 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 22:54:56.760 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 22:54:56.782 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 46.6643ms
+2017-02-15 22:54:56.789 +01:00 [Information] Request finished in 65.2405ms 200 text/html; charset=utf-8
+2017-02-15 22:55:06.530 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Create application/x-www-form-urlencoded 517
+2017-02-15 22:55:06.537 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:06.542 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:06.548 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel", "SchoolWebsite.Core.Command.InstructorCommands.CreateInstructor"]) - ModelState is Valid
+2017-02-15 22:55:06.554 +01:00 [Information] Running command CreateInstructor { Instructor: Instructor { Id: 0, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [], ApplicationUser: null }, Courses: [Course { CourseId: 12413, Name: null, InstructorId: null, CourseStudents: [], Instructor: null }, Course { CourseId: 54323, Name: null, InstructorId: null, CourseStudents: [], Instructor: null }], Status: False }
+2017-02-15 22:55:06.571 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Instructors] ([Birth], [Email], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Instructors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2017-02-15 22:55:08.091 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 22:55:08.105 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 22:55:08.110 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 22:55:08.114 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 1573.035ms
+2017-02-15 22:55:08.119 +01:00 [Information] Request finished in 1589.3774ms 302 
+2017-02-15 22:55:08.127 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:55:08.132 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:08.137 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:08.141 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:55:08.152 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:55:08.157 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:55:08.170 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 32.7026ms
+2017-02-15 22:55:08.177 +01:00 [Information] Request finished in 49.8717ms 200 text/html; charset=utf-8
+2017-02-15 22:55:11.262 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Edit/4006  
+2017-02-15 22:55:11.268 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:11.275 +01:00 [Information] Request finished in 12.4667ms 404 
+2017-02-15 22:55:15.220 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Delete/4006  
+2017-02-15 22:55:15.227 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:15.232 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:15.239 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4006"]) - ModelState is Valid
+2017-02-15 22:55:15.251 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-15 22:55:18.426 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+WHERE [c].[InstructorId] = @__id_0
+2017-02-15 22:55:18.431 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Delete.cshtml".
+2017-02-15 22:55:18.444 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 3212.9487ms
+2017-02-15 22:55:18.450 +01:00 [Information] Request finished in 3230.8409ms 200 text/html; charset=utf-8
+2017-02-15 22:55:28.789 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 22:55:28.795 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:28.800 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:28.805 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:55:28.818 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 22:55:28.825 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 22:55:28.847 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 47.588ms
+2017-02-15 22:55:28.854 +01:00 [Information] Request finished in 64.5913ms 200 text/html; charset=utf-8
+2017-02-15 22:55:50.306 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 22:55:50.311 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:50.315 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:50.320 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 22:55:50.331 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 22:55:50.336 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 22:55:50.371 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 55.0477ms
+2017-02-15 22:55:50.378 +01:00 [Information] Request finished in 71.1124ms 200 text/html; charset=utf-8
+2017-02-15 22:55:55.783 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Delete/4006  
+2017-02-15 22:55:55.789 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:55.794 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:55.799 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4006"]) - ModelState is Valid
+2017-02-15 22:55:55.810 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-15 22:55:57.512 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+WHERE [c].[InstructorId] = @__id_0
+2017-02-15 22:55:57.516 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Delete.cshtml".
+2017-02-15 22:55:57.534 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 1741.3096ms
+2017-02-15 22:55:57.541 +01:00 [Information] Request finished in 1757.7386ms 200 text/html; charset=utf-8
+2017-02-15 22:55:59.462 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Delete/4006 application/x-www-form-urlencoded 225
+2017-02-15 22:55:59.468 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 22:55:59.475 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 22:55:59.482 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4006", "SchoolWebsite.Core.Command.InstructorCommands.DeleteInstructor"]) - ModelState is Valid
+2017-02-15 22:55:59.500 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[Birth], [c].[Email], [c].[Name]
+FROM [Instructors] AS [c]
+WHERE [c].[Id] = @__id_0
+ORDER BY [c].[Id]
+2017-02-15 22:55:59.505 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c0].[CourseId], [c0].[InstructorId], [c0].[Name]
+FROM [Courses] AS [c0]
+WHERE EXISTS (
+    SELECT TOP(2) 1
+    FROM [Instructors] AS [c]
+    WHERE ([c].[Id] = @__id_0) AND ([c0].[InstructorId] = [c].[Id]))
+ORDER BY [c0].[InstructorId]
+2017-02-15 22:55:59.510 +01:00 [Information] Running command DeleteInstructor { Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }], ApplicationUser: null }, Status: False }
+2017-02-15 23:03:58.314 +01:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 23:03:58.419 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-15 23:03:58.442 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-15 23:03:59.556 +01:00 [Information] Executed DbCommand (22ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 23:03:59.726 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 23:03:59.744 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-15 23:03:59.797 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 23:03:59.840 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 23:03:59.859 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-15 23:03:59.909 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 23:04:00.115 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 23:04:00.181 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 23:04:00.193 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 23:04:00.204 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-15 23:04:00.215 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-15 23:04:00.552 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-15 23:04:00.552 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-15 23:04:00.669 +01:00 [Information] Request finished in 135.4153ms 200 
+2017-02-15 23:04:00.945 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:01.522 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:04.887 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-15 23:04:06.190 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 4791.6586ms
+2017-02-15 23:04:06.301 +01:00 [Information] Request finished in 5802.2573ms 200 text/html; charset=utf-8
+2017-02-15 23:04:07.875 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:04:07.881 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:07.912 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:07.932 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:07.988 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:08.454 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:04:08.623 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 736.3076ms
+2017-02-15 23:04:08.633 +01:00 [Information] Request finished in 759.2084ms 200 text/html; charset=utf-8
+2017-02-15 23:04:11.699 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 23:04:11.705 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:11.724 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:11.730 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:11.750 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 23:04:11.988 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 23:04:12.167 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 443.4212ms
+2017-02-15 23:04:12.174 +01:00 [Information] Request finished in 474.7967ms 200 text/html; charset=utf-8
+2017-02-15 23:04:14.721 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:04:14.727 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:14.732 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:14.738 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:14.749 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:14.755 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:04:14.769 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 37.2135ms
+2017-02-15 23:04:14.775 +01:00 [Information] Request finished in 55.0353ms 200 text/html; charset=utf-8
+2017-02-15 23:04:17.038 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 23:04:17.044 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:17.051 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:17.056 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:17.068 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 23:04:17.073 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 23:04:17.088 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 38.7176ms
+2017-02-15 23:04:17.095 +01:00 [Information] Request finished in 56.5975ms 200 text/html; charset=utf-8
+2017-02-15 23:04:19.111 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:04:19.116 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:19.122 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:19.128 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:19.140 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:19.145 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:04:19.158 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 37.8888ms
+2017-02-15 23:04:19.165 +01:00 [Information] Request finished in 55.2837ms 200 text/html; charset=utf-8
+2017-02-15 23:04:23.141 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Delete/4006  
+2017-02-15 23:04:23.147 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:23.152 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:23.273 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4006"]) - ModelState is Valid
+2017-02-15 23:04:23.295 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 23:04:23.327 +01:00 [Information] Executed DbCommand (3ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-15 23:04:26.770 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+WHERE [c].[InstructorId] = @__id_0
+2017-02-15 23:04:26.917 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Delete.cshtml".
+2017-02-15 23:04:27.001 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 3846.5733ms
+2017-02-15 23:04:27.010 +01:00 [Information] Request finished in 3867.7991ms 200 text/html; charset=utf-8
+2017-02-15 23:04:29.007 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Delete/4006 application/x-www-form-urlencoded 225
+2017-02-15 23:04:29.014 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:29.020 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:29.099 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["4006", "SchoolWebsite.Core.Command.InstructorCommands.DeleteInstructor"]) - ModelState is Valid
+2017-02-15 23:04:29.125 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 23:04:29.203 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[Birth], [c].[Email], [c].[Name]
+FROM [Instructors] AS [c]
+WHERE [c].[Id] = @__id_0
+ORDER BY [c].[Id]
+2017-02-15 23:04:29.295 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c0].[CourseId], [c0].[InstructorId], [c0].[Name]
+FROM [Courses] AS [c0]
+WHERE EXISTS (
+    SELECT TOP(2) 1
+    FROM [Instructors] AS [c]
+    WHERE ([c].[Id] = @__id_0) AND ([c0].[InstructorId] = [c].[Id]))
+ORDER BY [c0].[InstructorId]
+2017-02-15 23:04:29.343 +01:00 [Information] Running command DeleteInstructor { Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: null, InstructorId: 4006, CourseStudents: [], Instructor: Instructor { Id: 4006, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/16/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }], ApplicationUser: null }, Status: False }
+2017-02-15 23:04:32.165 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@p1='?', @p0='?', @p3='?', @p2='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0
+WHERE [CourseId] = @p1;
+SELECT @@ROWCOUNT;
+UPDATE [Courses] SET [InstructorId] = @p2
+WHERE [CourseId] = @p3;
+SELECT @@ROWCOUNT;
+2017-02-15 23:04:32.183 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Instructors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2017-02-15 23:04:32.220 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 23:04:32.228 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 3207.5526ms
+2017-02-15 23:04:32.234 +01:00 [Information] Request finished in 3226.1765ms 302 
+2017-02-15 23:04:32.244 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:04:32.249 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:32.253 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:32.258 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:32.269 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:32.273 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:04:32.293 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 38.0803ms
+2017-02-15 23:04:32.300 +01:00 [Information] Request finished in 56.7904ms 200 text/html; charset=utf-8
+2017-02-15 23:04:34.520 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:04:34.526 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:34.532 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:34.540 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:34.566 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:04:34.725 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:04:34.831 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 298.2681ms
+2017-02-15 23:04:34.838 +01:00 [Information] Request finished in 316.891ms 200 text/html; charset=utf-8
+2017-02-15 23:04:42.474 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course/Edit/54323  
+2017-02-15 23:04:42.480 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:42.486 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:42.492 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["54323"]) - ModelState is Valid
+2017-02-15 23:04:42.502 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-15 23:04:42.521 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:42.546 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:42.741 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Edit.cshtml".
+2017-02-15 23:04:42.832 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 344.3602ms
+2017-02-15 23:04:42.838 +01:00 [Information] Request finished in 363.2074ms 200 text/html; charset=utf-8
+2017-02-15 23:04:48.523 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Course/Edit/54323 application/x-www-form-urlencoded 256
+2017-02-15 23:04:48.530 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:48.536 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:48.622 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["54323", "SchoolWebsite.Application.Web.Models.CourseViewModels.EditCourseViewModel", "SchoolWebsite.Core.Command.CourseCommands.EditCourse"]) - ModelState is Valid
+2017-02-15 23:04:48.636 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:48.650 +01:00 [Information] Running command EditCourse { Course: Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: null, CourseStudents: [], Instructor: null }, Status: False }
+2017-02-15 23:04:48.668 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 23:04:48.673 +01:00 [Information] Executing RedirectResult, redirecting to "/Course".
+2017-02-15 23:04:48.678 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 142.3715ms
+2017-02-15 23:04:48.684 +01:00 [Information] Request finished in 159.7295ms 302 
+2017-02-15 23:04:48.694 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:04:48.699 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:48.703 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:48.708 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:48.722 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:04:48.727 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:04:48.750 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 46.4246ms
+2017-02-15 23:04:48.757 +01:00 [Information] Request finished in 63.604ms 200 text/html; charset=utf-8
+2017-02-15 23:04:50.455 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course/Edit/12413  
+2017-02-15 23:04:50.461 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:50.466 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:50.470 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["12413"]) - ModelState is Valid
+2017-02-15 23:04:50.486 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:50.499 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:50.504 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Edit.cshtml".
+2017-02-15 23:04:50.518 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 51.5724ms
+2017-02-15 23:04:50.525 +01:00 [Information] Request finished in 69.7458ms 200 text/html; charset=utf-8
+2017-02-15 23:04:54.481 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Course/Edit/12413 application/x-www-form-urlencoded 249
+2017-02-15 23:04:54.488 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:54.493 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:54.500 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["12413", "SchoolWebsite.Application.Web.Models.CourseViewModels.EditCourseViewModel", "SchoolWebsite.Core.Command.CourseCommands.EditCourse"]) - ModelState is Valid
+2017-02-15 23:04:54.516 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:54.522 +01:00 [Information] Running command EditCourse { Course: Course { CourseId: 12413, Name: "Lort", InstructorId: null, CourseStudents: [], Instructor: null }, Status: False }
+2017-02-15 23:04:54.534 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 23:04:54.540 +01:00 [Information] Executing RedirectResult, redirecting to "/Course".
+2017-02-15 23:04:54.545 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 52.0491ms
+2017-02-15 23:04:54.551 +01:00 [Information] Request finished in 70.3595ms 302 
+2017-02-15 23:04:54.561 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:04:54.566 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:54.571 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:54.576 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:54.589 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:04:54.594 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:04:54.614 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 42.3848ms
+2017-02-15 23:04:54.620 +01:00 [Information] Request finished in 60.0204ms 200 text/html; charset=utf-8
+2017-02-15 23:04:56.609 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course/Edit/12413  
+2017-02-15 23:04:56.615 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:56.619 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:56.624 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["12413"]) - ModelState is Valid
+2017-02-15 23:04:56.638 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:56.650 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:04:56.655 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Edit.cshtml".
+2017-02-15 23:04:56.669 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 49.1584ms
+2017-02-15 23:04:56.677 +01:00 [Information] Request finished in 67.6997ms 200 text/html; charset=utf-8
+2017-02-15 23:04:59.288 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Course/Edit/12413 application/x-www-form-urlencoded 254
+2017-02-15 23:04:59.293 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:59.299 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:59.305 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" with arguments (["12413", "SchoolWebsite.Application.Web.Models.CourseViewModels.EditCourseViewModel", "SchoolWebsite.Core.Command.CourseCommands.EditCourse"]) - ModelState is Valid
+2017-02-15 23:04:59.319 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+WHERE [i].[CourseId] = @__id_0
+2017-02-15 23:04:59.323 +01:00 [Information] Running command EditCourse { Course: Course { CourseId: 12413, Name: "Matematik", InstructorId: null, CourseStudents: [], Instructor: null }, Status: False }
+2017-02-15 23:04:59.336 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 23:04:59.340 +01:00 [Information] Executing RedirectResult, redirecting to "/Course".
+2017-02-15 23:04:59.344 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Edit (SchoolWebsite.Application.Web)" in 47.1005ms
+2017-02-15 23:04:59.350 +01:00 [Information] Request finished in 61.7226ms 302 
+2017-02-15 23:04:59.359 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:04:59.365 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:04:59.369 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:04:59.374 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:04:59.387 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:04:59.393 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:04:59.412 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 42.0246ms
+2017-02-15 23:04:59.418 +01:00 [Information] Request finished in 59.3276ms 200 text/html; charset=utf-8
+2017-02-15 23:05:01.984 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:05:01.990 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:01.994 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:05:02.000 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:05:02.010 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:05:02.016 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:05:02.029 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 34.9822ms
+2017-02-15 23:05:02.035 +01:00 [Information] Request finished in 51.753ms 200 text/html; charset=utf-8
+2017-02-15 23:05:03.065 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Create  
+2017-02-15 23:05:03.071 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:03.075 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:05:03.081 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:05:03.091 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 23:05:03.096 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Create.cshtml".
+2017-02-15 23:05:03.141 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 65.2513ms
+2017-02-15 23:05:03.148 +01:00 [Information] Request finished in 83.6294ms 200 text/html; charset=utf-8
+2017-02-15 23:05:11.748 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Create application/x-www-form-urlencoded 517
+2017-02-15 23:05:11.754 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:11.761 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:05:11.818 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel", "SchoolWebsite.Core.Command.InstructorCommands.CreateInstructor"]) - ModelState is Valid
+2017-02-15 23:05:11.848 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+2017-02-15 23:05:11.855 +01:00 [Information] Running command CreateInstructor { Instructor: Instructor { Id: 0, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [], ApplicationUser: null }, Courses: [Course { CourseId: 12413, Name: "Matematik", InstructorId: null, CourseStudents: [], Instructor: null }, Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: null, CourseStudents: [], Instructor: null }], Status: False }
+2017-02-15 23:05:11.922 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Instructors] ([Birth], [Email], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Instructors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2017-02-15 23:05:11.964 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 23:05:11.986 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p2='?', @p0='?', @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0, [Name] = @p1
+WHERE [CourseId] = @p2;
+SELECT @@ROWCOUNT;
+2017-02-15 23:05:11.996 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 23:05:12.004 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Create (SchoolWebsite.Application.Web)" in 240.5549ms
+2017-02-15 23:05:12.013 +01:00 [Information] Request finished in 262.0004ms 302 
+2017-02-15 23:05:12.030 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:05:12.041 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:12.049 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:05:12.058 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:05:12.079 +01:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:05:12.087 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:05:12.111 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 62.0783ms
+2017-02-15 23:05:12.124 +01:00 [Information] Request finished in 94.0496ms 200 text/html; charset=utf-8
+2017-02-15 23:05:21.506 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Edit/5005  
+2017-02-15 23:05:21.513 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:21.520 +01:00 [Information] Request finished in 13.6547ms 404 
+2017-02-15 23:05:24.517 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:05:24.524 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:05:24.529 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:05:24.534 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:05:24.547 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:05:24.553 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:05:24.572 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 44.6121ms
+2017-02-15 23:05:24.584 +01:00 [Information] Request finished in 66.175ms 200 text/html; charset=utf-8
+2017-02-15 23:06:11.554 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:06:11.564 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:11.569 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:11.573 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:11.584 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:06:11.590 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:06:11.617 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 48.1407ms
+2017-02-15 23:06:11.630 +01:00 [Information] Request finished in 72.2968ms 200 text/html; charset=utf-8
+2017-02-15 23:06:13.752 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor/Delete/5005  
+2017-02-15 23:06:13.757 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:13.763 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:13.768 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["5005"]) - ModelState is Valid
+2017-02-15 23:06:13.778 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-15 23:06:15.486 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[InstructorId], [c].[Name]
+FROM [Courses] AS [c]
+WHERE [c].[InstructorId] = @__id_0
+2017-02-15 23:06:15.491 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Delete.cshtml".
+2017-02-15 23:06:15.504 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 1742.6043ms
+2017-02-15 23:06:15.512 +01:00 [Information] Request finished in 1757.908ms 200 text/html; charset=utf-8
+2017-02-15 23:06:18.455 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Instructor/Delete/5005 application/x-www-form-urlencoded 225
+2017-02-15 23:06:18.460 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:18.466 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:18.470 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" with arguments (["5005", "SchoolWebsite.Core.Command.InstructorCommands.DeleteInstructor"]) - ModelState is Valid
+2017-02-15 23:06:18.485 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [c].[Id], [c].[Birth], [c].[Email], [c].[Name]
+FROM [Instructors] AS [c]
+WHERE [c].[Id] = @__id_0
+ORDER BY [c].[Id]
+2017-02-15 23:06:18.490 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c0].[CourseId], [c0].[InstructorId], [c0].[Name]
+FROM [Courses] AS [c0]
+WHERE EXISTS (
+    SELECT TOP(2) 1
+    FROM [Instructors] AS [c]
+    WHERE ([c].[Id] = @__id_0) AND ([c0].[InstructorId] = [c].[Id]))
+ORDER BY [c0].[InstructorId]
+2017-02-15 23:06:18.496 +01:00 [Information] Running command DeleteInstructor { Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: "Matematik", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: "Matematik", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }, Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: 12413, Name: "Matematik", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }, Course { CourseId: 54323, Name: "JacobStyrer", InstructorId: 5005, CourseStudents: [], Instructor: Instructor { Id: 5005, Name: "checkman", Email: "checkbox@instructor.copm", Birth: 02/11/2017 00:00:00, Courses: [Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }, Course { CourseId: null, Name: null, InstructorId: null, CourseStudents: null, Instructor: null }], ApplicationUser: null } }], ApplicationUser: null } }], ApplicationUser: null }, Status: False }
+2017-02-15 23:06:22.051 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p1='?', @p0='?', @p3='?', @p2='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Courses] SET [InstructorId] = @p0
+WHERE [CourseId] = @p1;
+SELECT @@ROWCOUNT;
+UPDATE [Courses] SET [InstructorId] = @p2
+WHERE [CourseId] = @p3;
+SELECT @@ROWCOUNT;
+2017-02-15 23:06:22.056 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Instructors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2017-02-15 23:06:22.062 +01:00 [Information] Executing RedirectResult, redirecting to "/Instructor".
+2017-02-15 23:06:22.066 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Delete (SchoolWebsite.Application.Web)" in 3600.6063ms
+2017-02-15 23:06:22.070 +01:00 [Information] Request finished in 3614.6758ms 302 
+2017-02-15 23:06:22.080 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:06:22.085 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:22.089 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:22.095 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:22.106 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:06:22.110 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:06:22.126 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 36.6433ms
+2017-02-15 23:06:22.132 +01:00 [Information] Request finished in 52.8841ms 200 text/html; charset=utf-8
+2017-02-15 23:06:31.596 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:06:31.601 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:31.606 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:31.612 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:31.622 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:06:31.627 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:06:31.640 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 33.8886ms
+2017-02-15 23:06:31.648 +01:00 [Information] Request finished in 49.9261ms 200 text/html; charset=utf-8
+2017-02-15 23:06:35.351 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:06:35.356 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:35.361 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:35.366 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:35.377 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:06:35.382 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:06:35.401 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 39.9657ms
+2017-02-15 23:06:35.407 +01:00 [Information] Request finished in 56.3039ms 200 text/html; charset=utf-8
+2017-02-15 23:06:36.515 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:06:36.521 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:36.525 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:36.531 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:36.541 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:06:36.547 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:06:36.564 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 37.7236ms
+2017-02-15 23:06:36.571 +01:00 [Information] Request finished in 55.1878ms 200 text/html; charset=utf-8
+2017-02-15 23:06:59.024 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:06:59.033 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:06:59.039 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:06:59.044 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:06:59.057 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:06:59.272 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:06:59.345 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 306.8172ms
+2017-02-15 23:06:59.356 +01:00 [Information] Request finished in 337.2034ms 200 text/html; charset=utf-8
+2017-02-15 23:06:59.619 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/favicon.ico  
+2017-02-15 23:06:59.671 +01:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\JacobWindows\Desktop\SchoolWebsiteRepo\SchoolWebsite\src\SchoolWebsite.Application.Web\wwwroot\favicon.ico"'
+2017-02-15 23:06:59.718 +01:00 [Information] Request finished in 97.4408ms 200 image/x-icon
+2017-02-15 23:07:00.895 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:07:00.900 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:07:00.905 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:07:00.910 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:07:00.921 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:07:00.926 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:07:00.939 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 34.1924ms
+2017-02-15 23:07:00.946 +01:00 [Information] Request finished in 51.7669ms 200 text/html; charset=utf-8
+2017-02-15 23:07:02.198 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Course  
+2017-02-15 23:07:02.204 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:07:02.208 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:07:02.212 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:07:02.225 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[CourseId], [i].[InstructorId], [i].[Name], [i0].[Id], [i0].[Birth], [i0].[Email], [i0].[Name]
+FROM [Courses] AS [i]
+LEFT JOIN [Instructors] AS [i0] ON [i].[InstructorId] = [i0].[Id]
+2017-02-15 23:07:02.229 +01:00 [Information] Executing ViewResult, running view at path "/Views/Course/Index.cshtml".
+2017-02-15 23:07:02.248 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.CourseController.Index (SchoolWebsite.Application.Web)" in 39.8595ms
+2017-02-15 23:07:02.262 +01:00 [Information] Request finished in 62.9178ms 200 text/html; charset=utf-8
+2017-02-15 23:07:06.003 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Instructor  
+2017-02-15 23:07:06.009 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-15 23:07:06.013 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-15 23:07:06.019 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-15 23:07:06.030 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-15 23:07:06.035 +01:00 [Information] Executing ViewResult, running view at path "/Views/Instructor/Index.cshtml".
+2017-02-15 23:07:06.049 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.InstructorController.Index (SchoolWebsite.Application.Web)" in 35.2973ms
+2017-02-15 23:07:06.057 +01:00 [Information] Request finished in 52.8497ms 200 text/html; charset=utf-8

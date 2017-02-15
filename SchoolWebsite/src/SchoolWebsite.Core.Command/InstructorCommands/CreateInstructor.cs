@@ -18,7 +18,9 @@ namespace SchoolWebsite.Core.Command.InstructorCommands
 
         public Instructor Instructor { get; set; }
         //Related to instructor
-        public Course Course { get; set; }
+        //public Course Course { get; set; }
+
+        public IList<Course> Courses { get; set; }
 
         public bool Status { get; set; }
 
@@ -28,12 +30,21 @@ namespace SchoolWebsite.Core.Command.InstructorCommands
             {
                 dbContext.Instructors.Add(Instructor);
                 dbContext.SaveChanges();
-                if (Course!=null)
+                if (Courses != null)
                 {
-                    Course.InstructorId = Instructor.Id;
-                    dbContext.Courses.Update(Course);
-                    dbContext.SaveChanges();
+                    foreach (var course in Courses)
+                    {
+                        course.InstructorId = Instructor.Id;
+                        dbContext.Courses.Update(course);
+                        dbContext.SaveChanges();
+                    }
                 }
+                //if (Course!=null)
+                //{
+                //    Course.InstructorId = Instructor.Id;
+                //    dbContext.Courses.Update(Course);
+                //    dbContext.SaveChanges();
+                //}
                 Status = true;
             } catch (Exception ex)
             {

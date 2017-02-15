@@ -53,9 +53,19 @@ namespace SchoolWebsite.Application.Web.Controllers
             if (ModelState.IsValid)
             {
                 command.Instructor = mapper.Map<Instructor>(viewModel);
+                //Only search for courses if admin added them to the instructor
+                IList<Filter> filter = viewModel.Filters.ToList();
+                IList<Course> courses = queryDb.Courses.ToList();
+                IList<Course> coursesToBeAdded = new List<Course>();
+                foreach (var item in filter)
+                {
+                    if (item.Selected)
+                        coursesToBeAdded.Add(courses.Where(i => i.CourseId == item.Id).Single());
+                }
+                command.Courses = coursesToBeAdded;
                 //Only search for a course if the instructor chose to be assigned one
-                if(viewModel.CourseId!=null)
-                    command.Course = queryDb.Courses.Where(c => c.CourseId == viewModel.CourseId).Single();
+                //if(viewModel.CourseId!=null)
+                //    command.Course = queryDb.Courses.Where(c => c.CourseId == viewModel.CourseId).Single();
                 command.Run();
                 if (command.Status)
                     return RedirectToAction("Index", "Instructor");
