@@ -10,6 +10,7 @@ using SchoolWebsite.Application.Web.Models.CourseViewModels;
 using Microsoft.AspNetCore.Authorization;
 using SchoolWebsite.Core.Command.CourseCommands;
 using AutoMapper;
+using System;
 
 namespace SchoolWebsite.Application.Web.Controllers
 {
@@ -51,14 +52,24 @@ namespace SchoolWebsite.Application.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                command.CourseId = viewModel.CourseId;
-                command.Name = viewModel.Name;
-                command.InstructorId = viewModel.InstructorId;
-                command.Run();
-                if (command.status)
-                    return RedirectToAction("Index", "Course");
-                else
-                    return RedirectToAction("Error","Course");
+                //if course already exist return error
+                try
+                {
+                    queryDb.Courses.Where(c => c.CourseId == viewModel.CourseId).Single();
+                    ModelState.AddModelError(String.Empty, "A course with that Id already exists");
+                    return RedirectToAction("Index","Course");
+                }
+                catch (Exception)
+                {
+                    command.CourseId = viewModel.CourseId;
+                    command.Name = viewModel.Name;
+                    command.InstructorId = viewModel.InstructorId;
+                    command.Run();
+                    if (command.status)
+                        return RedirectToAction("Index", "Course");
+                    else
+                        return RedirectToAction("Error", "Course");
+                }
             }
             //Something bad happened if we got to here
             return View(viewModel);

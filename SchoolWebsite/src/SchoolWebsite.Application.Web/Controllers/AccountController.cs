@@ -205,14 +205,20 @@ namespace SchoolWebsite.Application.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new ApplicationUser{ Email = viewModel.Email, UserName = viewModel.Username, InstructorId = id};
-                IdentityResult result = _userManager.CreateAsync(user, viewModel.Password).Result;
-                if (result.Succeeded)
+                string password = viewModel.Password;
+                string confPassword = viewModel.ConfirmPassword;
+                if (password.Equals(confPassword, StringComparison.Ordinal))
                 {
-                    _userManager.AddToRoleAsync(user,"Instructor").Wait();
+                    ApplicationUser user = new ApplicationUser { Email = viewModel.Email, UserName = viewModel.Username, InstructorId = id };
+                    IdentityResult result = _userManager.CreateAsync(user, viewModel.Password).Result;
+                    if (result.Succeeded)
+                    {
+                        _userManager.AddToRoleAsync(user, "Instructor").Wait();
+                        RedirectToAction("ManageInsIndex", "Account");
+                    }
                 }
             }
-            return View();
+            return View(viewModel);
         }
 
 

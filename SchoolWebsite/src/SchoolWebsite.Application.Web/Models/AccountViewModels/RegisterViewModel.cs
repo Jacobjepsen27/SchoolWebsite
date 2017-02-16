@@ -8,7 +8,7 @@ namespace SchoolWebsite.Application.Web.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
-        [Required]
+        //[Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

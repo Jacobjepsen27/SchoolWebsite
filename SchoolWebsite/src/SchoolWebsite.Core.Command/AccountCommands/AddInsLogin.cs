@@ -26,7 +26,7 @@ namespace SchoolWebsite.Core.Command.AccountCommands
 
         protected override void RunCommand()
         {
-            
+            dbContext.SaveChanges();
         }
     }
 }

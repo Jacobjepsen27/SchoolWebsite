@@ -48,20 +48,26 @@ namespace SchoolWebsite.Application.Web.Controllers
         
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(InstructorViewModel viewModel, [FromServices] CreateInstructor command)
         {
             if (ModelState.IsValid)
             {
                 command.Instructor = mapper.Map<Instructor>(viewModel);
-                IList<Filter> filter = viewModel.Filters.ToList();
-                IList<Course> courses = queryDb.Courses.ToList();
-                IList<Course> coursesToBeAdded = new List<Course>();
-                foreach (var item in filter)
+                //only look for courses if instructor choose to be assigned one
+                if (viewModel.Filters!=null)
                 {
-                    if (item.Selected)
-                        coursesToBeAdded.Add(courses.Where(i => i.CourseId == item.Id).Single());
+                    IList<Filter> filter = viewModel.Filters.ToList();
+                    IList<Course> courses = queryDb.Courses.ToList();
+                    IList<Course> coursesToBeAdded = new List<Course>();
+                    foreach (var item in filter)
+                    {
+                        if (item.Selected)
+                            coursesToBeAdded.Add(courses.Where(i => i.CourseId == item.Id).Single());
+                    }
+                    command.Courses = coursesToBeAdded;
                 }
-                command.Courses = coursesToBeAdded;
+                
                 command.Run();
                 if (command.Status)
                     return RedirectToAction("Index", "Instructor");
