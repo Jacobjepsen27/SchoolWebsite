@@ -1,0 +1,72 @@
+﻿@model SchoolWebsite.Application.Web.Models.InstructorViewModels.InstructorViewModel
+
+<div class="container">
+
+    <h2>Edit Instructor</h2>
+
+    <form asp-controller="Instructor" asp-action="Edit" method="post">
+
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Birth" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Birth" class="form-control" />
+                <span asp-validation-for="Birth" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <ul>
+                @if (Model.Filters.Any())
+                {
+                    @for (int i = 0; i < Model.Filters.Count(); i++)
+                    {
+                        @if (Model.Filters[i].Assigned)
+                        {
+                            <li>
+                                <input checked="checked" asp-for="Filters[i].Selected" class="form-check-input" type="checkbox">
+                                <label>@Model.Filters[i].Name</label>
+                                <input type="hidden" asp-for="@Model.Filters[i].Id" />
+                                <input type="hidden" asp-for="@Model.Filters[i].Name" />
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <input asp-for="Filters[i].Selected" class="form-check-input" type="checkbox">
+                                <label>@Model.Filters[i].Name</label>
+                                <input type="hidden" asp-for="@Model.Filters[i].Id" />
+                                <input type="hidden" asp-for="@Model.Filters[i].Name" />
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Create Instructor</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

@@ -53,7 +53,6 @@ namespace SchoolWebsite.Application.Web.Controllers
             if (ModelState.IsValid)
             {
                 command.Instructor = mapper.Map<Instructor>(viewModel);
-                //Only search for courses if admin added them to the instructor
                 IList<Filter> filter = viewModel.Filters.ToList();
                 IList<Course> courses = queryDb.Courses.ToList();
                 IList<Course> coursesToBeAdded = new List<Course>();
@@ -63,9 +62,6 @@ namespace SchoolWebsite.Application.Web.Controllers
                         coursesToBeAdded.Add(courses.Where(i => i.CourseId == item.Id).Single());
                 }
                 command.Courses = coursesToBeAdded;
-                //Only search for a course if the instructor chose to be assigned one
-                //if(viewModel.CourseId!=null)
-                //    command.Course = queryDb.Courses.Where(c => c.CourseId == viewModel.CourseId).Single();
                 command.Run();
                 if (command.Status)
                     return RedirectToAction("Index", "Instructor");
@@ -96,6 +92,22 @@ namespace SchoolWebsite.Application.Web.Controllers
                     return RedirectToAction("Error", "Instructor");
         }
 
+        public IActionResult Edit(int id)
+        {
+            //var viewModel = new InstructorViewModel();
+            var instructor = queryDb.InstructorsWithCourses.Where(i => i.Id == id).Single();
+            var viewModel = mapper.Map<InstructorViewModel>(instructor);
+            viewModel.Courses = queryDb.Courses.ToList();
+            viewModel.Filters = CheckBoxInitialization(viewModel);
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, InstructorViewModel viewModel)
+        {
+
+            return View();
+        }
 
 
 
@@ -104,6 +116,7 @@ namespace SchoolWebsite.Application.Web.Controllers
         public Filter[] CheckBoxInitialization(InstructorViewModel viewModel)
         {
             int courseCount = viewModel.Courses.Count();//viewModel.Courses.Count();
+            //int courseCount = queryDb.Courses.Count();
             Course[] course = new Course[courseCount];
             course = viewModel.Courses.ToArray();
             Filter[] filter = new Filter[courseCount];
@@ -123,10 +136,10 @@ namespace SchoolWebsite.Application.Web.Controllers
                     filter[i].Assigned = true;
                 else
                     filter[i].Assigned = false;
-
             }
             return filter;
         }
+
 
     }
 }
