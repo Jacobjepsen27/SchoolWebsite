@@ -39,12 +39,6 @@ namespace SchoolWebsite.Core.Command.InstructorCommands
                         dbContext.SaveChanges();
                     }
                 }
-                //if (Course!=null)
-                //{
-                //    Course.InstructorId = Instructor.Id;
-                //    dbContext.Courses.Update(Course);
-                //    dbContext.SaveChanges();
-                //}
                 Status = true;
             } catch (Exception ex)
             {
