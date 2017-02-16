@@ -1,0 +1,62 @@
+﻿@model SchoolWebsite.Application.Web.Models.AccountViewModels.ManageLoginInsViewModel
+<div class="container">
+
+    <br />
+
+   
+    <br />
+
+
+    <h4>Instructors with login</h4>
+
+    <table class="table">
+        <tr>
+            <th><label asp-for="Id"></label></th>
+            <th><label asp-for="Name"></label></th>
+            <th><label asp-for="Email"></label></th>
+            <th><label asp-for="Birth"></label></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.InstructorsWithLogin)
+        {
+            <tr>
+                <td><p asp-for="Id">@item.Id</p></td>
+                <td><p asp-for="Name">@item.Name</p></td>
+                <td><p asp-for="Email">@item.Email</p></td>
+                <td><p asp-for="Birth">@item.Birth</p></td>
+                <td>
+                    <a asp-action="RemoveLogin" asp-route-id="@item.Id">Remove Login</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <br />
+    <hr />
+
+    <h4>Instructors without login</h4>
+
+    <table class="table">
+        <tr>
+            <th><label asp-for="Id"></label></th>
+            <th><label asp-for="Name"></label></th>
+            <th><label asp-for="Email"></label></th>
+            <th><label asp-for="Birth"></label></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.InstructorsNoLogin)
+        {
+            <tr>
+                <td><p asp-for="Id">@item.Id</p></td>
+                <td><p asp-for="Name">@item.Name</p></td>
+                <td><p asp-for="Email">@item.Email</p></td>
+                <td><p asp-for="Birth">@item.Birth</p></td>
+                <td>
+                    <a asp-action="AddLogin" asp-route-id="@item.Id">Assign Login</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <a asp-action="ManageInsIndex">Go back to overview</a>
+</div>

@@ -12,10 +12,12 @@ using SchoolWebsite.Core.Entities;
 using SchoolWebsite.Application.Web.Models.AccountViewModels;
 using SchoolWebsite.Application.Web.Services;
 using SchoolWebsite.Core.Command.AccountCommands;
+using SchoolWebsite.Core.Query;
+using AutoMapper;
 
 namespace SchoolWebsite.Application.Web.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -23,19 +25,25 @@ namespace SchoolWebsite.Application.Web.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private readonly QueryDb queryDb;
+        private readonly IMapper mapper;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            QueryDb queryDb,
+            IMapper mapper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            this.queryDb = queryDb;
+            this.mapper = mapper;
         }
 
         //
@@ -86,10 +94,54 @@ namespace SchoolWebsite.Application.Web.Controllers
             return View(model);
         }
 
+        public IActionResult ManageInsIndex()
+        {
+            //Instantiating viewModel and its Lists
+            var viewModel = new ManageLoginInsViewModel();
+            viewModel.InstructorsNoLogin = new List<Instructor>();
+            viewModel.InstructorsWithLogin = new List<Instructor>();
+
+            //Dictionary containing whether or not the instructor has login
+            IDictionary<Instructor, bool> dic = new Dictionary<Instructor, bool>();
+            //All instructors
+            IList<Instructor> Instructors = queryDb.Instructors.ToList();
+            //All users in identityframework (IdentityUsers which can log in)
+            IList<ApplicationUser> Users = queryDb.Users.ToList();
+
+            //Populating Dictionary with instructors
+            foreach (var ins in Instructors)
+            {
+                dic.Add(ins,false);
+            }
+
+            //For every instructorid, check if it exists in Identityframework
+            foreach (var ins in Instructors)
+            {
+                foreach (var user in Users)
+                {
+                    //If true, the user has a login. Set the map key value to true
+                    if (ins.Id == user.InstructorId)
+                    {
+                        dic[ins] = true;
+                        break;
+                    }
+                }
+            }
+            //Iterating through the map. If the keys' value is true, add it to the viewmodels InstructorWithLogin, otherwise add it to InstructorNoLogin
+            foreach (var keys in dic.Keys)
+            {
+                if (dic[keys] == true)
+                    viewModel.InstructorsWithLogin.Add(keys);
+                else
+                    viewModel.InstructorsNoLogin.Add(keys);
+            }
+            return View(viewModel);
+        }
+
         //
         // GET: /Account/Register
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -131,12 +183,38 @@ namespace SchoolWebsite.Application.Web.Controllers
         // POST: /Account/LogOff
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation(4, "User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction("Index", "Home");
         }
+
+
+        public IActionResult AddLogin(int id)
+        {
+            //var viewModel = new ManageLoginInsViewModel();
+            var instructor = queryDb.Instructors.Where(i => i.Id == id).Single();
+            var viewModel = mapper.Map<RegisterViewModel>(instructor);
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddLogin(int id, RegisterViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = new ApplicationUser{ Email = viewModel.Email, UserName = viewModel.Username, InstructorId = id};
+                IdentityResult result = _userManager.CreateAsync(user, viewModel.Password).Result;
+                if (result.Succeeded)
+                {
+                    _userManager.AddToRoleAsync(user,"Instructor").Wait();
+                }
+            }
+            return View();
+        }
+
 
         //
         // POST: /Account/ExternalLogin
