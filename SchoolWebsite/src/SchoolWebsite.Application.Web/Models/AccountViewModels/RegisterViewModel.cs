@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolWebsite.Application.Web.Models.AccountViewModels
 {
-    public class RegisterViewModel
+    public class RegisterViewModel//<T>
     {
         //[Required]
         [EmailAddress]
@@ -28,5 +28,7 @@ namespace SchoolWebsite.Application.Web.Models.AccountViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //public T RoleType { get; set; }
     }
 }

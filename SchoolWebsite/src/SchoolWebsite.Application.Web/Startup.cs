@@ -20,6 +20,7 @@ using SchoolWebsite.Core.Command.AccountCommands;
 using SchoolWebsite.Core.Query;
 using SchoolWebsite.Core.Command.CourseCommands;
 using SchoolWebsite.Core.Command.InstructorCommands;
+using SchoolWebsite.Application.Web.ConfigurationObjects;
 
 namespace SchoolWebsite.Application.Web
 {
@@ -79,6 +80,10 @@ namespace SchoolWebsite.Application.Web
                 cfg.AddProfile(new AutoMapperConfig());
             });
             services.AddSingleton<IMapper>(sp => config.CreateMapper());
+
+            //Option pattern
+            services.AddOptions();
+            services.Configure<RoleOptions>(Configuration.GetSection("roles"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -109,7 +114,7 @@ namespace SchoolWebsite.Application.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             });
 
             context.Database.Migrate();

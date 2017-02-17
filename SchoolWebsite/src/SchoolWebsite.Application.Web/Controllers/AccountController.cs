@@ -14,6 +14,8 @@ using SchoolWebsite.Application.Web.Services;
 using SchoolWebsite.Core.Command.AccountCommands;
 using SchoolWebsite.Core.Query;
 using AutoMapper;
+using SchoolWebsite.Application.Web.ConfigurationObjects;
+using Microsoft.Extensions.Options;
 
 namespace SchoolWebsite.Application.Web.Controllers
 {
@@ -140,44 +142,44 @@ namespace SchoolWebsite.Application.Web.Controllers
 
         //
         // GET: /Account/Register
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public IActionResult Register(string returnUrl = null)
-        {
-            ViewData["ReturnUrl"] = returnUrl;
-            return View();
-        }
+        //[HttpGet]
+        //[Authorize(Roles = "Admin")]
+        //public IActionResult Register(string returnUrl = null)
+        //{
+        //    ViewData["ReturnUrl"] = returnUrl;
+        //    return View();
+        //}
 
         //
         // POST: /Account/Register
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
-        {
-            ViewData["ReturnUrl"] = returnUrl;
-            if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
-                    // Send an email with this link
-                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
-                    //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
-                    //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    _logger.LogInformation(3, "User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
-                }
-                AddErrors(result);
-            }
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        //{
+        //    ViewData["ReturnUrl"] = returnUrl;
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+        //        var result = await _userManager.CreateAsync(user, model.Password);
+        //        if (result.Succeeded)
+        //        {
+        //            // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
+        //            // Send an email with this link
+        //            //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        //            //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
+        //            //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
+        //            //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
+        //            await _signInManager.SignInAsync(user, isPersistent: false);
+        //            _logger.LogInformation(3, "User created a new account with password.");
+        //            return RedirectToLocal(returnUrl);
+        //        }
+        //        AddErrors(result);
+        //    }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+        //    // If we got this far, something failed, redisplay form
+        //    return View(model);
+        //}
 
         //
         // POST: /Account/LogOff
@@ -201,19 +203,22 @@ namespace SchoolWebsite.Application.Web.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddLogin(int id, RegisterViewModel viewModel)
+        public IActionResult AddLogin(int id, RegisterViewModel viewModel, [FromServices] IOptions<RoleOptions> options)
         {
+            
             if (ModelState.IsValid)
             {
+
                 string password = viewModel.Password;
                 string confPassword = viewModel.ConfirmPassword;
                 if (password.Equals(confPassword, StringComparison.Ordinal))
                 {
+                    var option = options.Value;
                     ApplicationUser user = new ApplicationUser { Email = viewModel.Email, UserName = viewModel.Username, InstructorId = id };
                     IdentityResult result = _userManager.CreateAsync(user, viewModel.Password).Result;
                     if (result.Succeeded)
                     {
-                        _userManager.AddToRoleAsync(user, "Instructor").Wait();
+                        _userManager.AddToRoleAsync(user, option.Instructor).Wait();
                         RedirectToAction("ManageInsIndex", "Account");
                     }
                 }

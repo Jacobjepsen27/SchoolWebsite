@@ -1,0 +1,662 @@
+2017-02-17 08:33:30.967 +01:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 08:33:31.032 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 08:33:31.047 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-17 08:33:31.727 +01:00 [Information] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:33:31.837 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:33:31.849 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:33:31.883 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:33:31.911 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:33:31.920 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:33:31.947 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:33:32.077 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:33:32.120 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:33:32.128 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:33:32.135 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:33:32.141 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:33:32.354 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 08:33:32.354 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-17 08:33:32.431 +01:00 [Information] Request finished in 96.1101ms 200 
+2017-02-17 08:33:32.823 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 08:33:35.124 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-17 08:33:35.839 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 3089.0558ms
+2017-02-17 08:33:35.941 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/css/site.css  
+2017-02-17 08:33:35.940 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/jquery/dist/jquery.js  
+2017-02-17 08:33:35.942 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/bootstrap/dist/css/bootstrap.css  
+2017-02-17 08:33:35.953 +01:00 [Information] Request finished in 3641.4968ms 200 text/html; charset=utf-8
+2017-02-17 08:33:35.987 +01:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-02-17 08:33:35.987 +01:00 [Information] The file "/lib/jquery/dist/jquery.js" was not modified
+2017-02-17 08:33:35.989 +01:00 [Information] The file "/css/site.css" was not modified
+2017-02-17 08:33:36.018 +01:00 [Information] Request finished in 99.3323ms 304 application/javascript
+2017-02-17 08:33:36.024 +01:00 [Information] Request finished in 99.4104ms 304 text/css
+2017-02-17 08:33:36.047 +01:00 [Information] Request finished in 77.4687ms 304 text/css
+2017-02-17 08:33:36.081 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/js/site.js?v=HTsxKfzYP1_7dlLF9x3zQxX3AtvCqz6x8SNqOfWIPdg  
+2017-02-17 08:33:36.086 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/images/banner1.svg  
+2017-02-17 08:33:36.089 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/images/banner4.svg  
+2017-02-17 08:33:36.132 +01:00 [Information] The file "/js/site.js" was not modified
+2017-02-17 08:33:36.111 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/bootstrap/dist/js/bootstrap.js  
+2017-02-17 08:33:36.140 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/images/banner2.svg  
+2017-02-17 08:33:36.163 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/images/banner3.svg  
+2017-02-17 08:33:36.185 +01:00 [Information] Request finished in 84.061ms 304 application/javascript
+2017-02-17 08:33:36.186 +01:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.js" was not modified
+2017-02-17 08:33:36.209 +01:00 [Information] The file "/images/banner2.svg" was not modified
+2017-02-17 08:33:36.210 +01:00 [Information] The file "/images/banner1.svg" was not modified
+2017-02-17 08:33:36.233 +01:00 [Information] Request finished in 152.2134ms 304 image/svg+xml
+2017-02-17 08:33:36.255 +01:00 [Information] The file "/images/banner3.svg" was not modified
+2017-02-17 08:33:36.277 +01:00 [Information] Request finished in 131.8302ms 304 application/javascript
+2017-02-17 08:33:36.278 +01:00 [Information] Request finished in 175.2656ms 304 image/svg+xml
+2017-02-17 08:33:36.286 +01:00 [Information] Request finished in 177.9716ms 304 image/svg+xml
+2017-02-17 08:33:36.287 +01:00 [Information] The file "/images/banner4.svg" was not modified
+2017-02-17 08:33:36.290 +01:00 [Information] Request finished in 201.9224ms 304 image/svg+xml
+2017-02-17 08:33:36.306 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2017-02-17 08:33:36.308 +01:00 [Information] The file "/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" was not modified
+2017-02-17 08:33:36.311 +01:00 [Information] Request finished in 5.5516ms 304 application/font-woff2
+2017-02-17 08:33:36.378 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/favicon.ico  
+2017-02-17 08:33:36.380 +01:00 [Information] The file "/favicon.ico" was not modified
+2017-02-17 08:33:36.383 +01:00 [Information] Request finished in 5.6029ms 304 image/x-icon
+2017-02-17 08:34:00.697 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/app/images  
+2017-02-17 08:34:00.705 +01:00 [Information] Request finished in 7.8722ms 404 
+2017-02-17 08:55:04.333 +01:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 08:55:04.394 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 08:55:04.411 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-17 08:55:05.081 +01:00 [Information] Executed DbCommand (13ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:55:05.185 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:55:05.197 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:55:05.233 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:55:05.261 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:55:05.272 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 08:55:05.297 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:55:05.421 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:55:05.467 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:55:05.484 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:55:05.491 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 08:55:05.497 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 08:55:05.591 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 08:55:05.591 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-17 08:55:05.669 +01:00 [Information] Request finished in 95.1868ms 200 
+2017-02-17 08:55:06.171 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments ([""]) - ModelState is Valid
+2017-02-17 08:55:08.575 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 08:55:09.484 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 3497.4502ms
+2017-02-17 08:55:09.535 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/jquery-validation/dist/jquery.validate.js  
+2017-02-17 08:55:09.546 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2017-02-17 08:55:09.553 +01:00 [Information] Request finished in 4005.6989ms 200 text/html; charset=utf-8
+2017-02-17 08:55:09.586 +01:00 [Information] The file "/lib/jquery-validation/dist/jquery.validate.js" was not modified
+2017-02-17 08:55:09.587 +01:00 [Information] The file "/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" was not modified
+2017-02-17 08:55:09.616 +01:00 [Information] Request finished in 48.8756ms 304 application/javascript
+2017-02-17 08:55:09.617 +01:00 [Information] Request finished in 60.1841ms 304 application/javascript
+2017-02-17 08:55:13.409 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Register  
+2017-02-17 08:55:13.428 +01:00 [Information] Authorization failed for user: null.
+2017-02-17 08:55:13.432 +01:00 [Warning] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-02-17 08:55:13.439 +01:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-02-17 08:55:13.459 +01:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-02-17 08:55:13.462 +01:00 [Information] Request finished in 53.2556ms 302 
+2017-02-17 08:55:13.467 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Login?ReturnUrl=%2FAccount%2FRegister  
+2017-02-17 08:55:13.494 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["/Account/Register"]) - ModelState is Valid
+2017-02-17 08:55:13.499 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 08:55:13.526 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 54.8958ms
+2017-02-17 08:55:13.530 +01:00 [Information] Request finished in 63.0005ms 200 text/html; charset=utf-8
+2017-02-17 08:55:15.987 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Register  
+2017-02-17 08:55:15.997 +01:00 [Information] Authorization failed for user: null.
+2017-02-17 08:55:16.002 +01:00 [Warning] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-02-17 08:55:16.006 +01:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-02-17 08:55:16.011 +01:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-02-17 08:55:16.014 +01:00 [Information] Request finished in 27.2285ms 302 
+2017-02-17 08:55:16.022 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Login?ReturnUrl=%2FAccount%2FRegister  
+2017-02-17 08:55:16.028 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["/Account/Register"]) - ModelState is Valid
+2017-02-17 08:55:16.032 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 08:55:16.045 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 18.6219ms
+2017-02-17 08:55:16.054 +01:00 [Information] Request finished in 32.5271ms 200 text/html; charset=utf-8
+2017-02-17 08:55:16.737 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Register  
+2017-02-17 08:55:16.742 +01:00 [Information] Authorization failed for user: null.
+2017-02-17 08:55:16.746 +01:00 [Warning] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-02-17 08:55:16.750 +01:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-02-17 08:55:16.754 +01:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-02-17 08:55:16.759 +01:00 [Information] Request finished in 20.7793ms 302 
+2017-02-17 08:55:16.765 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/Login?ReturnUrl=%2FAccount%2FRegister  
+2017-02-17 08:55:16.769 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["/Account/Register"]) - ModelState is Valid
+2017-02-17 08:55:16.773 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 08:55:16.784 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 14.3434ms
+2017-02-17 08:55:16.788 +01:00 [Information] Request finished in 24.0211ms 200 text/html; charset=utf-8
+2017-02-17 08:55:17.699 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 08:55:17.705 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments ([""]) - ModelState is Valid
+2017-02-17 08:55:17.709 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 08:55:17.722 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 18.2657ms
+2017-02-17 08:55:17.728 +01:00 [Information] Request finished in 29.2509ms 200 text/html; charset=utf-8
+2017-02-17 08:55:25.539 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/ application/x-www-form-urlencoded 235
+2017-02-17 08:55:25.624 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid
+2017-02-17 08:55:25.646 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/ application/x-www-form-urlencoded 235
+2017-02-17 08:55:25.651 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid
+2017-02-17 08:55:25.652 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[InstructorId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[StudentId], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-02-17 08:55:25.671 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[InstructorId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[StudentId], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-02-17 08:55:25.801 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-02-17 08:55:25.810 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-02-17 08:55:25.823 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:55:25.826 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 08:55:25.856 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2017-02-17 08:55:25.859 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2017-02-17 08:55:25.887 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-02-17 08:55:25.889 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-02-17 08:55:25.941 +01:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2017-02-17 08:55:25.943 +01:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2017-02-17 08:55:25.974 +01:00 [Information] User logged in.
+2017-02-17 08:55:25.974 +01:00 [Information] User logged in.
+2017-02-17 08:55:25.982 +01:00 [Information] Executing RedirectResult, redirecting to "/Home/Index".
+2017-02-17 08:55:25.984 +01:00 [Information] Executing RedirectResult, redirecting to "/Home/Index".
+2017-02-17 08:55:26.009 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 442.2039ms
+2017-02-17 08:55:26.010 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 338.4407ms
+2017-02-17 08:55:26.017 +01:00 [Information] Request finished in 475.8995ms 302 
+2017-02-17 08:55:26.018 +01:00 [Information] Request finished in 369.4113ms 302 
+2017-02-17 08:55:26.024 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Home/Index  
+2017-02-17 08:55:26.040 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 08:55:26.044 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 08:55:26.118 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-17 08:55:26.147 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 101.9937ms
+2017-02-17 08:55:26.151 +01:00 [Information] Request finished in 126.9858ms 200 text/html; charset=utf-8
+2017-02-17 09:51:25.842 +01:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:51:25.902 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:51:25.918 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-17 09:51:26.590 +01:00 [Information] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:51:26.699 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:51:26.710 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:51:26.746 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:51:26.773 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:51:26.785 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:51:26.812 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:51:26.937 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:51:26.980 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:51:26.989 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:51:26.996 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:51:27.002 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:51:27.174 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-17 09:51:27.174 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 09:51:27.250 +01:00 [Information] Request finished in 96.7259ms 200 
+2017-02-17 09:51:27.462 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[InstructorId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[StudentId], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__id_0
+2017-02-17 09:51:27.531 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-02-17 09:51:27.540 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:51:27.567 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2017-02-17 09:51:27.594 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-02-17 09:51:27.606 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:28.031 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments ([""]) - ModelState is Valid
+2017-02-17 09:51:30.493 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 09:51:31.354 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 3478.2879ms
+2017-02-17 09:51:31.431 +01:00 [Information] Request finished in 4302.136ms 200 text/html; charset=utf-8
+2017-02-17 09:51:37.898 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/ application/x-www-form-urlencoded 278
+2017-02-17 09:51:37.903 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:38.012 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments (["SchoolWebsite.Application.Web.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid
+2017-02-17 09:51:38.032 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[InstructorId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[StudentId], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-02-17 09:51:38.130 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-02-17 09:51:38.140 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:51:38.150 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2017-02-17 09:51:38.161 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-02-17 09:51:38.179 +01:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2017-02-17 09:51:38.186 +01:00 [Information] User logged in.
+2017-02-17 09:51:38.194 +01:00 [Information] Executing RedirectResult, redirecting to "/Home/Index".
+2017-02-17 09:51:38.197 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 287.85ms
+2017-02-17 09:51:38.200 +01:00 [Information] Request finished in 303.6201ms 302 
+2017-02-17 09:51:38.206 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Home/Index  
+2017-02-17 09:51:38.210 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:38.213 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 09:51:38.291 +01:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-02-17 09:51:38.312 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.HomeController.Index (SchoolWebsite.Application.Web)" in 99.3128ms
+2017-02-17 09:51:38.316 +01:00 [Information] Request finished in 110.1051ms 200 text/html; charset=utf-8
+2017-02-17 09:51:42.267 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/ManageInsIndex  
+2017-02-17 09:51:42.272 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:42.289 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:51:42.292 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 09:51:42.315 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-17 09:51:42.334 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[InstructorId], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StudentId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2017-02-17 09:51:42.440 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/ManageInsIndex.cshtml".
+2017-02-17 09:51:42.492 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" in 215.6552ms
+2017-02-17 09:51:42.496 +01:00 [Information] Request finished in 229.9962ms 200 text/html; charset=utf-8
+2017-02-17 09:51:53.316 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/AddLogin/1002  
+2017-02-17 09:51:53.321 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:53.327 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:51:53.334 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002"]) - ModelState is Valid
+2017-02-17 09:51:53.353 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-17 09:51:53.371 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-17 09:51:53.502 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/AddLogin.cshtml".
+2017-02-17 09:51:53.550 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" in 224.9762ms
+2017-02-17 09:51:53.554 +01:00 [Information] Request finished in 239.1329ms 200 text/html; charset=utf-8
+2017-02-17 09:51:59.061 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Account/AddLogin/1002 application/x-www-form-urlencoded 282
+2017-02-17 09:51:59.066 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:51:59.072 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:51:59.096 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002", "SchoolWebsite.Application.Web.Models.AccountViewModels.RegisterViewModel", "Microsoft.Extensions.Options.OptionsManager`1[SchoolWebsite.Application.Web.ConfigurationObjects.RoleOptions]"]) - ModelState is Invalid
+2017-02-17 09:54:58.691 +01:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:54:58.753 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:54:58.768 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-17 09:54:59.425 +01:00 [Information] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:54:59.524 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:54:59.535 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:54:59.569 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:54:59.596 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:54:59.606 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:54:59.632 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:54:59.763 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:54:59.810 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:54:59.818 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:54:59.825 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:54:59.831 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:55:00.047 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 09:55:00.047 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-17 09:55:00.121 +01:00 [Information] Request finished in 95.3516ms 200 
+2017-02-17 09:55:00.298 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:55:00.740 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments ([""]) - ModelState is Valid
+2017-02-17 09:55:03.168 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 09:55:04.015 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 3462.1791ms
+2017-02-17 09:55:04.075 +01:00 [Information] Request finished in 4071.274ms 200 text/html; charset=utf-8
+2017-02-17 09:55:09.639 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/ManageInsIndex  
+2017-02-17 09:55:09.645 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:55:09.662 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:55:09.666 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 09:55:09.691 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-17 09:55:09.712 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[InstructorId], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StudentId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2017-02-17 09:55:09.818 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/ManageInsIndex.cshtml".
+2017-02-17 09:55:09.873 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" in 225.0368ms
+2017-02-17 09:55:09.879 +01:00 [Information] Request finished in 241.3191ms 200 text/html; charset=utf-8
+2017-02-17 09:55:11.241 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/AddLogin/1002  
+2017-02-17 09:55:11.244 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:55:11.248 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:55:11.268 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002"]) - ModelState is Valid
+2017-02-17 09:55:11.280 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-17 09:55:11.293 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-17 09:55:11.415 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/AddLogin.cshtml".
+2017-02-17 09:55:11.464 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" in 215.12ms
+2017-02-17 09:55:11.469 +01:00 [Information] Request finished in 227.9501ms 200 text/html; charset=utf-8
+2017-02-17 09:55:16.108 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Account/AddLogin/1002 application/x-www-form-urlencoded 283
+2017-02-17 09:55:16.114 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:55:16.122 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:55:16.220 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002", "SchoolWebsite.Application.Web.Models.AccountViewModels.RegisterViewModel", "Microsoft.Extensions.Options.OptionsManager`1[SchoolWebsite.Application.Web.ConfigurationObjects.RoleOptions]"]) - ModelState is Valid
+2017-02-17 09:57:05.051 +01:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:57:05.112 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-02-17 09:57:05.128 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-02-17 09:57:05.791 +01:00 [Information] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:57:05.895 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:57:05.906 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2017-02-17 09:57:05.942 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:57:05.971 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:57:05.982 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Instructors] AS [i])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-02-17 09:57:06.009 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:57:06.128 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:57:06.176 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:57:06.184 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:57:06.190 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Name], [x].[NormalizedName]
+FROM [AspNetRoles] AS [x]
+WHERE [x].[NormalizedName] = @__normalizedRoleName_0
+2017-02-17 09:57:06.197 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Email], [user].[EmailConfirmed], [user].[InstructorId], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[StudentId], [user].[TwoFactorEnabled], [user].[UserName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE [userrole].[RoleId] = @__role_Id_0
+2017-02-17 09:57:06.543 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1048/  0
+2017-02-17 09:57:06.543 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/  
+2017-02-17 09:57:06.619 +01:00 [Information] Request finished in 93.7653ms 200 
+2017-02-17 09:57:06.799 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:57:07.239 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" with arguments ([""]) - ModelState is Valid
+2017-02-17 09:57:09.661 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-02-17 09:57:10.497 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.Login (SchoolWebsite.Application.Web)" in 3445.7623ms
+2017-02-17 09:57:10.558 +01:00 [Information] Request finished in 4058.1283ms 200 text/html; charset=utf-8
+2017-02-17 09:57:11.917 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/ManageInsIndex  
+2017-02-17 09:57:11.922 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:57:11.938 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:57:11.941 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" with arguments (null) - ModelState is Valid
+2017-02-17 09:57:11.966 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+2017-02-17 09:57:11.984 +01:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[InstructorId], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StudentId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2017-02-17 09:57:12.099 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/ManageInsIndex.cshtml".
+2017-02-17 09:57:12.156 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.ManageInsIndex (SchoolWebsite.Application.Web)" in 229.7457ms
+2017-02-17 09:57:12.161 +01:00 [Information] Request finished in 245.9198ms 200 text/html; charset=utf-8
+2017-02-17 09:57:13.252 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1048/Account/AddLogin/1002  
+2017-02-17 09:57:13.257 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:57:13.264 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:57:13.295 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002"]) - ModelState is Valid
+2017-02-17 09:57:13.309 +01:00 [Warning] The LINQ expression 'Single()' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider.
+2017-02-17 09:57:13.323 +01:00 [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [i].[Id], [i].[Birth], [i].[Email], [i].[Name]
+FROM [Instructors] AS [i]
+WHERE [i].[Id] = @__id_0
+2017-02-17 09:57:13.439 +01:00 [Information] Executing ViewResult, running view at path "/Views/Account/AddLogin.cshtml".
+2017-02-17 09:57:13.491 +01:00 [Information] Executed action "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" in 229.2936ms
+2017-02-17 09:57:13.495 +01:00 [Information] Request finished in 244.5793ms 200 text/html; charset=utf-8
+2017-02-17 09:57:15.138 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1048/Account/AddLogin/1002 application/x-www-form-urlencoded 262
+2017-02-17 09:57:15.144 +01:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-02-17 09:57:15.151 +01:00 [Information] Authorization was successful for user: "Admin".
+2017-02-17 09:57:15.256 +01:00 [Information] Executing action method "SchoolWebsite.Application.Web.Controllers.AccountController.AddLogin (SchoolWebsite.Application.Web)" with arguments (["1002", "SchoolWebsite.Application.Web.Models.AccountViewModels.RegisterViewModel", "Microsoft.Extensions.Options.OptionsManager`1[SchoolWebsite.Application.Web.ConfigurationObjects.RoleOptions]"]) - ModelState is Invalid
