@@ -21,6 +21,7 @@ using SchoolWebsite.Core.Query;
 using SchoolWebsite.Core.Command.CourseCommands;
 using SchoolWebsite.Core.Command.InstructorCommands;
 using SchoolWebsite.Application.Web.ConfigurationObjects;
+using SchoolWebsite.Core.Command.StudentCommands;
 
 namespace SchoolWebsite.Application.Web
 {
@@ -70,6 +71,8 @@ namespace SchoolWebsite.Application.Web
             services.AddTransient<EditCourse, EditCourse>();
             services.AddTransient<CreateInstructor, CreateInstructor>();
             services.AddTransient<DeleteInstructor, DeleteInstructor>();
+            services.AddTransient<AddStudent, AddStudent>();
+            services.AddTransient<DeleteStudent, DeleteStudent>();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>(); 

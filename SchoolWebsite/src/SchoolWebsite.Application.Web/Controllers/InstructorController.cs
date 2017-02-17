@@ -17,15 +17,13 @@ namespace SchoolWebsite.Application.Web.Controllers
     [Authorize(Roles = "Admin")]
     public class InstructorController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
         private readonly QueryDb queryDb;
         private readonly ILogger _logger;
         private readonly IMapper mapper;
 
-        public InstructorController(UserManager<ApplicationUser> userManager, ILoggerFactory loggerFactory,
+        public InstructorController(ILoggerFactory loggerFactory,
             QueryDb queryDb, IMapper mapper)
         {
-            this.userManager = userManager;
             this.queryDb = queryDb;
             _logger = loggerFactory.CreateLogger<InstructorController>();
             this.mapper = mapper;

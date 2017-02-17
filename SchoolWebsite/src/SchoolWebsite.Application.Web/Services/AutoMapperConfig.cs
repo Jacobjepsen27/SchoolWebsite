@@ -18,6 +18,7 @@ namespace SchoolWebsite.Application.Web.Services
             CreateMap<InstructorViewModel, Instructor>().ReverseMap();
             CreateMap<ManageLoginInsViewModel, Instructor>().ReverseMap();
             CreateMap<RegisterViewModel, Instructor>().ReverseMap();
+            CreateMap<SchoolWebsite.Application.Web.Models.StudentViewModels.IndexViewModel, Student>().ReverseMap();
         }
     }
 }

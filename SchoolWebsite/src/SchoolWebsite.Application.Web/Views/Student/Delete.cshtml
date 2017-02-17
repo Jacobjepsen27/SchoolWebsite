@@ -1,0 +1,52 @@
+﻿@model SchoolWebsite.Application.Web.Models.StudentViewModels.IndexViewModel
+
+<div class="container">
+
+    <h4>Confirm delete of the Student</h4>
+    <br />
+
+    
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    <label asp-for="Id"></label>:
+                </dt>
+
+                <dd>
+                    <p>@Model.Id</p>
+                </dd>
+
+               <dt>
+                    <label asp-for="Name"></label>:
+                </dt>
+
+                <dd>
+                    <p>@Model.Name</p>
+                </dd>
+
+                <dt>
+                    <label asp-for="Email"></label>:
+                </dt>
+
+                <dd>
+                    <p>@Model.Email</p>
+                </dd>
+
+                <dt>
+                    <label asp-for="Birth"></label>:
+                </dt>
+
+                <dd>
+                    <p>@Model.Birth</p>
+                </dd>
+            </dl>
+        </div>
+    <form asp-controller="Student" asp-action="Delete" method="post">
+        <div class="form-group">
+            <input type="submit" value="Delete Course"  class="btn btn-danger">
+        </div>
+    </form>
+
+
+
+</div>

@@ -1,0 +1,35 @@
+﻿@model SchoolWebsite.Application.Web.Models.StudentViewModels.IndexViewModel
+<div class="container">
+
+    <br />
+
+    @Html.ActionLink("Add Student", "Create")
+
+    <br />
+
+
+    <h4>Instructor Overview</h4>
+
+    <table class="table">
+        <tr>
+            <th><label asp-for="Id"></label></th>
+            <th><label asp-for="Name"></label></th>
+            <th><label asp-for="Email"></label></th>
+            <th><label asp-for="Birth"></label></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Students)
+        {
+            <tr>
+                <td><p asp-for="Id">@item.Id</p></td>
+                <td><p asp-for="Name">@item.Name</p></td>
+                <td><p asp-for="Email">@item.Email</p></td>
+                <td><p asp-for="Birth">@item.Birth</p></td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
