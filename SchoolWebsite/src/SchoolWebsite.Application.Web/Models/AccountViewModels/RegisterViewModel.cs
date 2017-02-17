@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolWebsite.Application.Web.Models.AccountViewModels
 {
-    public class RegisterViewModel//<T>
+    public class RegisterViewModel
     {
         //[Required]
         [EmailAddress]

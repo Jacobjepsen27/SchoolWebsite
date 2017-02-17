@@ -25,7 +25,13 @@
                 <td><p asp-for="Email">@item.Email</p></td>
                 <td><p asp-for="Birth">@item.Birth</p></td>
                 <td>
-                    <a asp-action="RemoveLogin" asp-route-id="@item.Id">Remove Login</a>
+                    @*<a asp-action="RemoveLogin" asp-route-id="@item.Id">Remove Login</a>*@
+                    <form asp-action="RemoveLogin" asp-controller="Account" method="post">
+                        <div class="form-group" hidden>
+                            <input asp-for="Id" type="text" value="@item.Id" />
+                        </div>
+                        <input type="submit" class="btn btn-danger" value="Remove Login"/>
+                    </form>
                 </td>
             </tr>
         }
